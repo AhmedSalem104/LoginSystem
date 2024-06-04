@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="img/login.png">
+    <title>Smart Login System </title>
+</head>
+
+<body>
+
+    <section class=" my-2 d-flex justify-content-center  text-center ">
+        <div class="cardnew w-50 p-5 my-5 ">
+
+
+            <div id="successLoginAlert" class="p-2 m-2 d-flex justify-content-center align-items-center mt-1 d-none ">
+                <h3> Login Success</h3>
+                <i class="fa-solid fa-check mx-4 "></i>
+            </div>
+            <div id="FailedLoginAlert" class=" p-2 m-2   d-flex  justify-content-center align-items-center d-none ">
+
+                <h3>  Email or Password is Incorrect </h3>
+                <i class="fa-solid fa-xmark mx-4 "></i>
+            </div>
+
+
+
+            <div class="">   
+                <h3 id="title">Smart Login System</h3>
+            </div>
+            <div class="cardnew-Content ">
+                <input onkeyup="validUserEmail()" id="userEmail" class="form-control my-3 py-2" type="email"
+                placeholder="Enter Your email" autocomplete="on">
+            <div id="userEmailAlert" class="alert alert-danger mt-1 d-none">
+                <ul class="p-0 m-0 ps-3">
+                    <li> The email must start with one or more characters</li>
+                    <li> It must contain a single @ symbol.</li>
+
+                </ul>
+            </div>
+            <input onkeyup="validUserPassword()" id="userPassword" class="form-control my-3 py-2" type="password"
+                placeholder="Enter Your password" autocomplete="off">
+            <div id="userPasswordAlert" class="alert alert-danger mt-1 d-none">
+                <ul class="p-0 m-0 ps-3">
+                    <li> At least one upper case English letter</li>
+                    <li> At least one lower case English letter</li>
+                    <li> At least one digit. </li>
+                    <li> At least one special character.</li>
+                    <li> Minimum eight in length .</li>
+
+                </ul>
+            </div>
+                <button onclick="login()" id="loginBtn" class="btn  my-3 w-100 "> login </button>
+                
+            </div>
+            <div class="footer my-2">
+                <p>Don’t have an account? <a href="Register.html">Sign Up</a></p>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

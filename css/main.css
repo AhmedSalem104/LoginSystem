@@ -1,0 +1,130 @@
+:root {
+    --main-color: #17A2B8
+}
+
+body {
+    background-color: #24353F;
+}
+
+#title {
+    font-size: 45px;
+    color: var(--main-color);
+    font-weight: 400;
+}
+
+#loginBtn {
+    border-color: var(--main-color);
+    font-size: large;
+    color: var(--main-color);
+    transition: .5s;
+    border-radius: 4px;
+}
+
+#loginBtn:hover {
+    background-color: var(--main-color);
+    color: white;
+
+}
+
+
+#registerBtn {
+    border-color: var(--main-color);
+    font-size: large;
+    color: var(--main-color);
+    transition: .5s;
+    border-radius: 4px;
+}
+
+#registerBtn:hover {
+    background-color: var(--main-color);
+    color: white;
+
+}
+
+.cardnew-Content input {
+    border-color: white;
+    background-color: #24353F !important;
+    color: white !important;
+    
+
+}
+
+.cardnew {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    background-color: #24353F;
+    min-width: 340px;
+}
+
+.footer {
+    color: white;
+    font-size: 19px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    transition: .4s;
+}
+
+.footer a:hover {
+    text-decoration: 1px underline solid;
+    color: white;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.575) !important;
+}
+
+.cardnew-Content ul {
+    text-align: left !important;
+
+
+}
+
+#successLoginAlert {
+    background-color: rgba(1, 255, 1, 0.24);
+    color: rgb(41, 204, 0);
+    border-radius: 10px;
+}
+
+#FailedLoginAlert {
+    background-color: rgba(255, 0, 0, 0.212);
+    color: rgb(224, 0, 0);
+    border-radius: 10px;
+}
+
+
+#successRegisterAlert {
+    background-color: rgba(1, 255, 1, 0.24);
+    color: rgb(41, 204, 0);
+    border-radius: 10px;
+}
+
+#FailedRegisterAlert {
+    background-color: rgba(255, 0, 0, 0.212);
+    color: rgb(224, 0, 0);
+    border-radius: 10px;
+}
+
+
+#emailFailedRegisterAlert {
+    background-color: rgba(255, 0, 0, 0.212);
+    color: rgb(224, 0, 0);
+    border-radius: 10px;
+}
+
+
+
+#FailedRegisterAlert p {
+
+    color: rgb(231, 0, 0);
+    border-radius: 10px;
+
+    display: block;
+    font-weight: bold;
+}
+
+#UserName{
+    color: rgb(100, 128, 0);
+}
+

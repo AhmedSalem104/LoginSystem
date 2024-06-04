@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="img/login.png">
+    <title>Smart Login System </title>
+</head>
+
+<body>
+
+    <section class=" my-2 d-flex justify-content-evenly align-items-center text-center ">
+        <div class="cardnew w-50 p-5 my-5 ">
+            <div class="">
+                <h2 id="UserName" class="text-white fs-1" style="font-family: cursive;">Welcome </h2>
+            </div>
+
+        </div>
+
+        <div class="mx-2"> <button class="btn btn-danger" onclick="goToLoginPage()">Log Out</button></div>
+    </section>
+
+
+
+    <script src="js/main.js"> </script>
+
+    <script>
+        var welcomeUserName = JSON.parse(localStorage.getItem("WelcomeUserName"))
+        console.log(welcomeUserName)
+        if(welcomeUserName == null){
+            welcomeUserName = "UserName"
+        }
+        document.querySelector("#UserName").innerHTML += `<span style="color:gold;">${welcomeUserName}</span>`
+    </script>
+
+</body>
+
+</html>
