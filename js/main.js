@@ -11,7 +11,6 @@ var data = ""
 
 console.log(UserDataArr)
 
-
 function Register() {
     var crruentdataUser = getUserData()
     validAllData();
@@ -195,28 +194,35 @@ function login() {
 
     var emailsInLocalStorage = SplitDataArrByEmail()
     var crruentdataUser = getUserDataLogin()
-    var currentIndex = SplitDataArrByEmail().indexOf(crruentdataUser.Email)
+    var currentIndex = ""
 
-    if (emailsInLocalStorage.includes(crruentdataUser.Email)) {
+    if (emailsInLocalStorage == null || emailsInLocalStorage == "") {
+        LoginAlertErrorDisplay()
 
-        if (UserDataArr[currentIndex].Password == crruentdataUser.Password) {
-            LoginAlertSuccessDisplay()
-            // console.log(" Password is Valid")
-            var UserName = UserDataArr[currentIndex].userName;
-            WelcomeUserName = UserName;
-            saveUserNameToLocal()
-            redirectHome()
+    }
+    else{
+        currentIndex = SplitDataArrByEmail().indexOf(crruentdataUser.Email)
+        if (emailsInLocalStorage.includes(crruentdataUser.Email)) {
 
-
+            if (UserDataArr[currentIndex].Password == crruentdataUser.Password) {
+                LoginAlertSuccessDisplay()
+                // console.log(" Password is Valid")
+                var UserName = UserDataArr[currentIndex].userName;
+                WelcomeUserName = UserName;
+                saveUserNameToLocal()
+                redirectHome()
+    
+    
+            }
+            else {
+                LoginAlertErrorDisplay()
+                // console.log(" Password is not Valid")
+            }
         }
         else {
             LoginAlertErrorDisplay()
-            // console.log(" Password is not Valid")
+            // console.log("Email is Not Valid")
         }
-    }
-    else {
-        LoginAlertErrorDisplay()
-        // console.log("Email is Not Valid")
     }
 }
 function redirectHome() {

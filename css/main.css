@@ -128,3 +128,12 @@ body {
     color: rgb(100, 128, 0);
 }
 
+.card{
+    background-image: linear-gradient(#2b055ce0,#0baa6d);
+border-radius: 25px;
+}
+#CardView{
+    background-color: rgba(170, 172, 98, 0.904);
+    border-radius: 8px;
+}
+
