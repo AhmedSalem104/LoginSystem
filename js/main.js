@@ -221,7 +221,7 @@ function login() {
 }
 function redirectHome() {
     setTimeout(() => {
-        location.href = "Home.html";
+        location.href = "Index.html";
     }, 1000);
 }
 function redirectToLogin() {
